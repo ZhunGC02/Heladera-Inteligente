@@ -25,7 +25,7 @@ from database import (
 from ia_service import generar_receta_con_inventario
 
 def main(page: ft.Page):
-    page.title = "🧊 Heladera Inteligente v1.0.0-Beta"
+    page.title = "🧊 Heladera Inteligente v1.1.1-Beta"
     page.theme_mode = ft.ThemeMode.DARK
     page.padding = 20
     page.scroll = ft.ScrollMode.AUTO
