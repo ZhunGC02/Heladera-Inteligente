@@ -1,5 +1,20 @@
 import os
 import flet as ft
+import os
+import sys
+import ssl
+import certifi
+
+# Forzar a Python a usar los certificados de certifi (ideal para PyInstaller)
+os.environ['SSL_CERT_FILE'] = certifi.where()
+os.environ['REQUESTS_CA_BUNDLE'] = certifi.where()
+
+# Opcional: Contexto SSL por defecto
+try:
+    ssl._create_default_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+
 from database import (
     obtener_inventario, 
     agregar_producto, 
